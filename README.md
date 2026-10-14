@@ -18,7 +18,7 @@ Pressing the binding before the build finishes shows its progress, then opens cs
 ## Install
 
 ```tmux
-set -g @plugin 'path-or-git-url/tmux-claude-session-manager'
+set -g @plugin 'sashkashishka/tmux-claude-session-manager'
 ```
 
 Then `prefix + I`.
@@ -49,7 +49,7 @@ No notification is shown while you're looking at that session: a tmux client who
 
 When the tmux plugin loads, it runs `claude plugin marketplace add` and `claude plugin install csm-notify@tmux-claude-session-manager` in the background, and reinstalls when `claude-plugin/` changes (bump its `version` in `plugin.json` too). If Claude Code isn't found it only shows a short tmux message; output goes to `claude-plugin.log`. Claude sessions started before the install pick it up after a restart.
 
-By hand: `/plugin install csm-notify --marketplace ~/.config/tmux/plugins/tmux-claude-session-manager`. To remove: `claude plugin uninstall csm-notify@tmux-claude-session-manager` and set `@csm-claude-plugin off`.
+By hand, e.g. without the tmux plugin: `/plugin install csm-notify --marketplace sashkashishka/tmux-claude-session-manager`. To remove: `claude plugin uninstall csm-notify@tmux-claude-session-manager` and set `@csm-claude-plugin off`.
 
 Debugging: set `CSM_NOTIFY_LOG` (a file path) in the environment Claude runs in to log every hook payload; `CSM_NOTIFY_DRY_RUN=1` prints the notification instead of showing it.
 
