@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "tmux-claude-session-manager",
+  "description": "Claude Code side of the tmux-claude-session-manager tmux plugin.",
+  "owner": {
+    "name": "sashkashishka",
+    "email": "alexandr1696@hotmail.com"
+  },
+  "plugins": [
+    {
+      "name": "csm-notify",
+      "description": "macOS notifications when a Claude Code session needs your input or has finished.",
+      "source": "./claude-plugin",
+      "category": "productivity"
+    }
+  ]
+}

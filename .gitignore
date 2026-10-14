@@ -1,0 +1,5 @@
+.build-root/
+.build.lock/
+build.log
+claude-plugin.log
+__pycache__/
